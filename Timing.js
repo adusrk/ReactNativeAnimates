@@ -25,9 +25,9 @@ export default function Timing() {
 
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={startAnimation}>
+      <TouchableWithoutFeedback onPress={startAnimation}>
         <Animated.View style={[styles.box, animatedStyles]} />
-      </TouchableOpacity>
+      </TouchableWithoutFeedback>
     </View>
   );
 }
