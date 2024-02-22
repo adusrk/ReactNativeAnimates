@@ -1,22 +1,22 @@
 /* eslint-disable prettier/prettier */
 import React, { useState } from "react";
-import { StyleSheet, View, Animated, TouchableWithoutFeedback } from "react-native";
+import { StyleSheet, View, Animated, TouchableWithoutFeedback, TouchableOpacity } from "react-native";
 
 export default function Timing() {
   const [animation, setAnimation] = useState(new Animated.Value(1));
 
   const startAnimation = () => {
     Animated.timing(animation, {
-      toValue: 0,
-      duration: 350,
-      useNativeDriver: true,
-    }).start(() => {
-      Animated.timing(animation, {
-        toValue: 1,
-        duration: 500,
+        toValue: 0,
+        duration: 1000,
         useNativeDriver: true,
-      }).start();
-    });
+      }).start(() => {
+        Animated.timing(animation, {
+          toValue: 1,
+          duration: 1000,
+          useNativeDriver: true,
+        }).start();
+      });
   };
 
   const animatedStyles = {
@@ -25,9 +25,9 @@ export default function Timing() {
 
   return (
     <View style={styles.container}>
-      <TouchableWithoutFeedback onPress={startAnimation}>
+      <TouchableOpacity onPress={startAnimation}>
         <Animated.View style={[styles.box, animatedStyles]} />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
     </View>
   );
 }
