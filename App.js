@@ -1,8 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View} from 'react-native';
-import Translate from './Translate';
-
+import Scale from './AniProperties/Scale';
 export default function App() {
   return (
     <View
@@ -12,7 +11,7 @@ export default function App() {
         justifyContent: 'center',
         backgroundColor: 'white',
       }}>
-        <Translate />
+        <Scale />
     </View>
   );
 }
