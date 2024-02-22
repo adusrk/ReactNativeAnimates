@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
 import {View} from 'react-native';
-import Timing from './Timing';
+import Translate from './Translate';
 
 export default function App() {
   return (
@@ -12,7 +12,7 @@ export default function App() {
         justifyContent: 'center',
         backgroundColor: 'white',
       }}>
-        <Timing />
+        <Translate />
     </View>
   );
 }
